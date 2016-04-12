@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>XOY</title>
+
+		<!--Javascript CDN -->
+		
+		<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src=""https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js""></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css" />
+		<meta charset="utf-8">
+
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		 <style>
+			h1{font-weight:bold;}
+		 </style>
+	</head>
+<body>
+	<nav class="navbar navbar-inverse navbar fixed-top">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	      <a class="navbar-brand" href="#">XOY</a>
+	    </div>
+		<ul class="nav navbar-nav nav-pills nav-tabs">
+			<li class="active"><a data-toggle="tab" href="#calendar" >Calendar </a></li>
+			<li><a data-toggle="tab" href="#who"><b>Who</b></a></li>
+			<li><a data-toggle="tab" href="#why"><b>Why</b></a></li>
+			<li><a data-toggle="tab" href="#when"><b>When</b></a></li>
+			<li><a data-toggle="tab" href="#what"><b>What</b></a></li>
+			<li><a data-toggle="tab" href="#how"><b>How</b></a></li>
+			<li><a data-toggle="tab" href="#story"><b>Story</b></a></li>
+<!--  -->
+		</ul>
+		<ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+	  </div>
+	</nav>
+	<div class="container">
+		<div class="jumbotron" align="center">
+		 <h1>My Calendar</h1>
+				<div class="container-fluid">
+						
+				
+				<iframe src="https://calendar.google.com/calendar/embed?height=555&amp;wkst=1&amp;bgcolor=%23cccccc&amp;src=f3vf67qpjc19njq5a4nv0rt788%40group.calendar.google.com&amp;color=%23B1365F&amp;ctz=America%2FLos_Angeles" style="border:solid 20px #777" width="740" height="555" frameborder="0" scrolling="no"></iframe>
+				
+				</div>
+		</div>
+	</div>
+<script>
+		$(document).ready(function(){
+		
+			$('.nav').mouseover(function(){
+				 var color  = $(this).css("background-color");
+
+				$(this).css("background", "#380606");
+
+				$(this).bind("mouseout", function(){
+                $(this).css("background", color);
+				});
+			});
+			
+			$(".button a").on("click", function(){
+				$(".button").find(".active").removeClass("active");
+				$(this).parent().addClass("active");
+			});
+			
+			
+		});
+</script>
+
+
+
+
+	<!-- 
+		//	
+			
+		//
+	-->
+	</body>
+</html>
